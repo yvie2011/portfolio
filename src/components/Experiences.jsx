@@ -1,20 +1,51 @@
 import React from 'react'
+import { CheckCircleOutlined } from "@ant-design/icons"
 
 const Experiences = () => {
+  const experiences = [
+    {
+      title: "Stage en Développement Web Frontend",
+      description: "1 mois",
+      icon: <CheckCircleOutlined />
+    },
+    {
+      title: "Conception du Dashboard d'Administration",
+      description: "Application mobile MAYEGE",
+      icon: <CheckCircleOutlined />
+    },
+    {
+      title: "Système de Gestion de Notes",
+      description: "Établissements Primaires",
+      icon: <CheckCircleOutlined />
+    },
+    {
+      title: "Application Mobile de Gestion des Dons de Sang",
+      description: "Développement fullstack",
+      icon: <CheckCircleOutlined />
+    },
+    {
+      title: "Carnet Médical en Ligne",
+      description: "Application web et mobile",
+      icon: <CheckCircleOutlined />
+    },
+    {
+      title: "Application 'Travels'",
+      description: "Réservation de tickets de voyage inter-urbain",
+      icon: <CheckCircleOutlined />
+    }
+  ]
+
   return (
     <div className='exp'>
-        <h1>Experiences</h1>
-        <h2>Stage en developpement web frontend (1 mois )</h2>
-        <h2>Conception du dashboard d'administration de l'application
-            mobile MAYEGE
-        </h2>
-        <h2>Systeme de Gestion de notes dans les etablissements
-            Primaires
-        </h2>
-        <h2>Application mobile de gestion des dons de sang</h2>
-        <h2>Application web et mobile de carnet medical en ligne </h2>
-        <h2>Application web "Travels" pour la reservation des tickets de voyage inter-urbain </h2>
-
+        <h1>Expériences</h1>
+        <ul>
+          {experiences.map((exp, idx) => (
+            <li key={idx}>
+              <strong>{exp.title}</strong>
+              <p>{exp.description}</p>
+            </li>
+          ))}
+        </ul>
     </div>
   )
 }
