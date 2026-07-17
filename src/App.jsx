@@ -1,30 +1,27 @@
-import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
+import Education from './components/Education'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 import './App.css'
-import HeaderComp from './components/HeaderComp'
-import Propos from './components/Propos'
-import Formation from './components/Formation'
-import Experiences from './components/Experiences'
-import FooterComp from './components/FooterComp'
-import Competences from './components/Competences'
 
 const App = () => {
   return (
-
-    <div>
-      <div className="blob blob-1"></div>
-      <div className="blob blob-2"></div>
-      <div className="blob blob-3"></div>
-
-      <div className='main'>
-        <HeaderComp/>
-        <Propos/>
-        <Competences/>
-        <Formation/>
-        <Experiences/>
-        <FooterComp/>
-      </div>
+    <div className="app">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Education />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
     </div>
-
   )
 }
 
